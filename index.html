@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng Quay May Mắn Random</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1 class="title">🎡 Vòng Quay May Mắn</h1>
+
+<div class="wheel-container">
+    <canvas id="wheel" width="400" height="400"></canvas>
+    
+    <div id="centerCircle">
+        <button id="spinBtn" class="spin-btn">QUAY</button>
+    </div>
+</div>
+
+<div class="input-box">
+    <h3 class="sub-title">Danh sách lựa chọn</h3>
+    <textarea id="choices" placeholder="Mỗi dòng một lựa chọn">Lựa chọn 1
+Lựa chọn 2</textarea>
+    <button id="updateBtn" class="update-btn">Cập nhật</button>
+</div>
+
+<h3 class="sub-title">Kết quả gần nhất:</h3>
+
+<ul id="resultList"></ul>
+
+<div id="popup" class="popup hidden">
+    <div class="popup-box">
+        <h2>Kết quả 🎉</h2>
+        <p id="popupResult" class="popup-result"></p>
+
+        <div class="popup-actions">
+            <button id="closePopup" class="close-btn">Đóng</button>
+            <button id="clearResult" class="clear-btn">Xoá kết quả</button>
+        </div>
+    </div>
+</div>
+
+<!-- Âm thanh -->
+<audio id="spinSound" src="spin.mp3"></audio>
+<audio id="winSound" src="win.mp3"></audio>
+
+<!-- Hiệu ứng pháo bông -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
